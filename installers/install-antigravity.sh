@@ -30,10 +30,11 @@ ep_agent_require_api_key
 python_runtime=$(
     "$EP_AGENT_ROOT/.venv/bin/python" -c 'import sys; print(sys.base_prefix)'
 )
+uv_executable=$(command -v uv)
 antigravity_settings="$HOME/.gemini/antigravity-cli/settings.json"
 mkdir -p "$(dirname "$antigravity_settings")"
 "$EP_AGENT_ROOT/.venv/bin/python" - "$antigravity_settings" \
-    "$EP_AGENT_ROOT/.venv" "$python_runtime" <<'PY'
+    "$EP_AGENT_ROOT/.venv" "$python_runtime" "$uv_executable" <<'PY'
 import json
 import os
 import sys
@@ -98,6 +99,6 @@ ep_agent_install_skills \
     "$EP_AGENT_ROOT/harnesses/antigravity/skills"
 
 printf '\nGoogle Antigravity CLI and EP Agent skills are ready.\n'
-printf 'Antigravity can access the EP runtime and Expected Parrot API from its sandbox.\n'
+printf 'Antigravity can access the EP runtime, uv, and Expected Parrot API from its sandbox.\n'
 printf 'Next: from the project where you want to work, run:\n'
 printf '  source "%s/.venv/bin/activate" && %s\n' "$EP_AGENT_ROOT" "$agy_command"
