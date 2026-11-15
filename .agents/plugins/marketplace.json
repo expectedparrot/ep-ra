@@ -1,0 +1,21 @@
+{
+  "name": "expected-parrot",
+  "interface": {
+    "displayName": "Expected Parrot"
+  },
+  "plugins": [
+    {
+      "name": "ep-agent",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/expectedparrot/ep-agent",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Design and Option Evaluation"
+  short_description: "Generate and evaluate product options with Zwicky"
+  default_prompt: "Use $research-product-design to explore product options, evaluate tradeoffs, and produce a decision-oriented report."

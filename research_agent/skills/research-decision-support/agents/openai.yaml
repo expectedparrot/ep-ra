@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi-Criteria Decision Support"
+  short_description: "Compare fixed alternatives with auditable MCDA"
+  default_prompt: "Use $research-decision-support to compare fixed alternatives, elicit stakeholder judgments, analyze tradeoffs, and produce a decision-oriented report."

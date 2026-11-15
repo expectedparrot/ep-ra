@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Visibility Research"
+  short_description: "Measure brand presence in AI answers"
+  default_prompt: "Use $research-ai-visibility to measure how my brand and competitors appear in AI-generated answers."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Instrument Pretesting"
+  short_description: "Pretest and revise EDSL surveys with Messick"
+  default_prompt: "Pretest this survey with Messick, preserve evidence provenance, and produce an actionable revised instrument report."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Competing Hypotheses"
+  short_description: "Analyze evidence against competing explanations with Langley"
+  default_prompt: "Use Langley to conduct an auditable Analysis of Competing Hypotheses for this question."

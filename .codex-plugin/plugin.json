@@ -1,0 +1,8 @@
+{
+  "name": "ep-agent",
+  "version": "0.1.0",
+  "description": "Expected Parrot research skills for Codex.",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "skills": "./research_agent/skills/",
+  "onboardingSkill": "./harnesses/codex/skills/ep-agent-codex-setup/SKILL.md"
+}

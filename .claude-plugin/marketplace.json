@@ -1,0 +1,14 @@
+{
+  "name": "expected-parrot",
+  "description": "Expected Parrot research agent plugins.",
+  "owner": {
+    "name": "Expected Parrot"
+  },
+  "plugins": [
+    {
+      "name": "ep-agent",
+      "source": "./research_agent",
+      "description": "Research workflows, skills, and specialist agents for Expected Parrot studies using EDSL."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ep-agent",
+  "version": "0.1.0",
+  "description": "Research workflows, skills, and specialist agents for Expected Parrot studies using EDSL.",
+  "author": {
+    "name": "Expected Parrot"
+  },
+  "repository": "https://github.com/expectedparrot/ep-agent",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "keywords": [
+    "edsl",
+    "research",
+    "surveys",
+    "simulation"
+  ]
+}

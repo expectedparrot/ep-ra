@@ -1,0 +1,11 @@
+{
+  "name": "expectedparrot-ep-agent",
+  "version": "0.1.0",
+  "description": "Expected Parrot research skills and Pi adapter",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./.pi/extensions/research-approval.ts"],
+    "skills": ["./research_agent/skills"]
+  }
+}

@@ -1,0 +1,13 @@
+# Generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.DS_Store
+.env*
+!.env.example
+.edsl_model_archive.json
+sessions/
+session-transcripts/
+*.log

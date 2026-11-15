@@ -1,0 +1,59 @@
+[project]
+name = "ep-agent"
+version = "0.1.0"
+description = "EP Agent research skills and locked EDSL runtime"
+license = "PolyForm-Noncommercial-1.0.0"
+requires-python = ">=3.11"
+dependencies = [
+    "ariel[fielding] @ git+https://github.com/expectedparrot/ariel.git@449dcaf9c7fff888f1dcb27e10b61551ec01dcf3",
+    "aivis @ git+https://github.com/expectedparrot/aivis.git@9a1d761f66309b4f3cd5b4a52bb0ed3adf40b8fc",
+    "green[fielding] @ git+https://github.com/expectedparrot/green.git@d05a21ab176797f6016df7b30a8beef7cb79e4fb",
+    "anthropic>=0.75",
+    "bewley @ git+https://github.com/expectedparrot/bewley.git@main",
+    "claude-agent-sdk==0.2.179",
+    "defusedxml>=0.7",
+    "dewey @ git+https://github.com/expectedparrot/dewey.git@08f395a3b20105c6c2ea3aa0c366110555f8ffe4",
+    "edsl @ git+https://github.com/expectedparrot/edsl.git@0bfe1ba70345ef1b5d19d716884189fb73fa7f3c",
+    "epiq @ git+https://github.com/expectedparrot/epiq.git@06918d8341b6ad9dd0b58316d8b61cc03bf31786",
+    "herndon @ git+https://github.com/expectedparrot/herndon.git@49e7e91a2fb6a09e31aa5acc2d99d2073d21b0c8",
+    "kahn @ git+https://github.com/expectedparrot/kahn.git@main",
+    "katz @ git+https://github.com/expectedparrot/katz.git@79699e233faa600e9925cbf9e73a9408ee006dae",
+    "research-labeling @ git+https://github.com/expectedparrot/labeling.git@9333722af1cb7b7d53b86ba982f1213bc9e78af7",
+    "langley @ git+https://github.com/expectedparrot/langley.git@6502010a84619272a5513d65c3682be0729956d5",
+    "lxml>=5.0",
+    "markdown-it-py>=4.0",
+    "matplotlib>=3.8",
+    "mcda[edsl] @ git+https://github.com/expectedparrot/mcda.git@d66edd02097fe703f4f52aa6a739c0e1a411ca5e",
+    "messick[edsl] @ git+https://github.com/expectedparrot/messick.git@38e505d41716645dd0767e31c7e44bb86fe7802c",
+    "numpy>=1.26",
+    "openpyxl>=3.1",
+    "pandas>=2.2",
+    "pdf2image>=1.17",
+    "pdfplumber>=0.11",
+    "pillow>=10.0",
+    "premortem @ git+https://github.com/expectedparrot/premortem.git@724247b820e2bab3613e1055d990ee0efc963a83",
+    "pypdf>=5.0",
+    "roth[fielding,teams,reviews] @ git+https://github.com/expectedparrot/roth.git@30572f698eced5f0aee96ed862045f54ba79638b",
+    "python-pptx>=1.0",
+    "pyyaml>=6.0",
+    "scipy>=1.12",
+    "runway @ git+https://github.com/expectedparrot/runway.git@75f6810ac889aac4d37c0750c37340e40a8d2e4f",
+    "seaborn>=0.13",
+    "sonesta @ git+https://github.com/expectedparrot/sonesta.git@41ec7edbd1df852d4830b98ed7e8fba2002819d8",
+    "stanton[fielding] @ git+https://github.com/expectedparrot/stanton.git@c66738ade6e1f683632fa1e4f80b1c60c7219c45",
+    "treffen[fielding] @ git+https://github.com/expectedparrot/treffen.git@8d6b7ae2bcc37999cc643b1732c5955599e5744a",
+    "umriss @ git+https://github.com/expectedparrot/umriss.git@4f9b20c4a7b24d468d8f8e2bceb75f247a78f195",
+    "uxtest @ git+https://github.com/expectedparrot/uxtest.git@6f80e1a8a9e90f712683fe35055f7be8f0c59f23",
+    "vorhersage @ git+https://github.com/expectedparrot/vorhersage.git@ecb0ca36bcecb1fcad37b8271da1e5dadf8bca47",
+    "voting[humanize] @ git+https://github.com/expectedparrot/voting.git@ac181d7a22dd0e32590a8cab5c939672ceebedf7",
+    "zugunruhe @ git+https://github.com/expectedparrot/zugunruhe.git@8affd4f030147cafc795edce3c556035ecd2916a",
+    "zwicky @ git+https://github.com/expectedparrot/zwicky.git@d4843c925d0b866dc6d0f7c996bfc939606d83c2",
+    "zwill[conditional-baseline] @ git+https://github.com/expectedparrot/zwill.git@0d88c5172d46a79af4d502d3df66df916c124374",
+]
+
+[tool.uv]
+package = false
+override-dependencies = [
+    "edsl @ git+https://github.com/expectedparrot/edsl.git@0bfe1ba70345ef1b5d19d716884189fb73fa7f3c",
+    "python-pptx>=1.0",
+]

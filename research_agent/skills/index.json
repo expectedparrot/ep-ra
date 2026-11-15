@@ -1,0 +1,712 @@
+{
+  "skills": [
+    {
+      "name": "edsl-agent-lists",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-file-store",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-human-survey",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/background-questions.md",
+        "references/editing-live-surveys.md",
+        "references/grouped-pages-and-messages.md",
+        "references/humanize-schema.md",
+        "references/in-progress-responses.md",
+        "references/interview-languages.md",
+        "references/question-interview.md"
+      ]
+    },
+    {
+      "name": "edsl-human-survey-agent-access",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-human-survey-assistant",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/config.md",
+        "references/data.md"
+      ]
+    },
+    {
+      "name": "edsl-human-survey-css",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-human-survey-javascript",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/events.md"
+      ]
+    },
+    {
+      "name": "edsl-human-survey-notifications",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-human-survey-preview",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-object-publishing",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-object-search",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/recent-content-discovery.md"
+      ]
+    },
+    {
+      "name": "edsl-prolific-study",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/constraints.md",
+        "references/decision-checklist.md"
+      ]
+    },
+    {
+      "name": "edsl-quirks",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/full-reference.md"
+      ]
+    },
+    {
+      "name": "edsl-scenario-lists",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-study-files",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "edsl-surveys",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/composition-contracts.md",
+        "references/execution-and-recovery.md",
+        "references/full-reference.md",
+        "references/probabilistic-responses.md",
+        "references/survey-lifecycle.md",
+        "references/survey-reference.md"
+      ]
+    },
+    {
+      "name": "edsl-surveys-cost",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/calibration-and-branching.md",
+        "references/estimation-details.md"
+      ]
+    },
+    {
+      "name": "free-text-homogeneity",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "description.md"
+      ]
+    },
+    {
+      "name": "methods-ai-interview",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/transcript-inspection.md",
+        "scripts/export_interviews.py"
+      ]
+    },
+    {
+      "name": "methods-ai-simulation-faq",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "methods-calibrating-agents",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/gotchas.md",
+        "references/script_reference.md",
+        "references/study_structure.md",
+        "scripts/calibrate_agents.py"
+      ]
+    },
+    {
+      "name": "methods-logprob-confidence",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "methods-opinion-clustering",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "methods-persona-calibration",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/run_calibration.py",
+        "references/run_calibration_human.py",
+        "references/study_survey.py"
+      ]
+    },
+    {
+      "name": "methods-prompt-optimization",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "methods-psychometric-testing",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "methods-response-validation",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "scripts/validate_results.py"
+      ]
+    },
+    {
+      "name": "methods-simulation-analysis",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/log-analysis-patterns.md"
+      ]
+    },
+    {
+      "name": "methods-thematic-analysis",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "methods-transcripts-to-personas",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "scripts/transcripts_to_personas.py"
+      ]
+    },
+    {
+      "name": "post-run-review",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "description.md",
+        "references/pilot-review-gate.md"
+      ]
+    },
+    {
+      "name": "report-academic",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "report-authoring",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/audience-profiles.md",
+        "references/plot-standards.md",
+        "references/style-and-audience.md",
+        "references/transparency.md",
+        "scripts/plot_style.py"
+      ]
+    },
+    {
+      "name": "report-chat-transcript",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "scripts/embed_chat_in_report.py",
+        "scripts/render_chat_transcript.py"
+      ]
+    },
+    {
+      "name": "report-excel-export",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/herndon-patterns.md"
+      ]
+    },
+    {
+      "name": "report-plot-checker",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "scripts/check_plots.py"
+      ]
+    },
+    {
+      "name": "report-quality-review",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "name": "report-slides",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/pptx-patterns.md",
+        "references/sonesta-patterns.md",
+        "references/template-schema.md"
+      ]
+    },
+    {
+      "name": "report-visual-audit",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "scripts/check_report_html.py",
+        "scripts/check_writeup.py"
+      ]
+    },
+    {
+      "name": "research-ai-visibility",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "name": "research-competing-hypotheses",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/input-contracts.md"
+      ]
+    },
+    {
+      "name": "research-concept-testing",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/code-examples.md"
+      ]
+    },
+    {
+      "name": "research-conjoint",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-conversation",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-data-labeling",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-decision-support",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/method-selection-guide.md"
+      ]
+    },
+    {
+      "name": "research-digital-twins",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-epiq-datasets",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-estimation",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-fair-division",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/benchmarks.md",
+        "references/methods.md",
+        "references/participation.md"
+      ]
+    },
+    {
+      "name": "research-forecasting",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-instrument-pretesting",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ]
+    },
+    {
+      "name": "research-interview-design",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/geiecke-jaravel-template.md",
+        "references/interviewer-conduct.md"
+      ]
+    },
+    {
+      "name": "research-literature-review",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-marginal-twins",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-matching",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/collection.md",
+        "references/comparisons.md",
+        "references/mechanisms.md"
+      ]
+    },
+    {
+      "name": "research-meeting-preparation",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/collection.md",
+        "references/evidence-and-design.md",
+        "references/rehearsal.md"
+      ]
+    },
+    {
+      "name": "research-message-testing",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/analysis-and-reporting.md",
+        "references/setup-examples.md"
+      ]
+    },
+    {
+      "name": "research-premortem",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/premortem-cli-quickref.md",
+        "references/quality-standards.md"
+      ]
+    },
+    {
+      "name": "research-price-tiering",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/implementation-details.md"
+      ]
+    },
+    {
+      "name": "research-prior-work",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-product-design",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/zwicky-cli-quickref.md"
+      ]
+    },
+    {
+      "name": "research-qualitative-data-analysis",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-referee-report",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-scenario-planning",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-slide-feedback",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-social-simulation",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/blueprint-design.md",
+        "references/blueprint-visualization.md",
+        "references/concordia-setup.md",
+        "references/entity-prefabs.md"
+      ]
+    },
+    {
+      "name": "research-sociological-analysis",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/theories.md"
+      ]
+    },
+    {
+      "name": "research-survey",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/modality-review.md",
+        "references/survey-patterns.md"
+      ]
+    },
+    {
+      "name": "research-survey-migration",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "research-ux-testing",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/environment.md",
+        "references/evidence.md",
+        "references/fixtures.md",
+        "references/synthesis-and-reporting.md"
+      ]
+    },
+    {
+      "name": "research-voting",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "workflow-chat-summary",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "workflow-completion-checklist",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/all-checklists.md",
+        "references/edsl-study.md"
+      ]
+    },
+    {
+      "name": "workflow-file-layout",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/full-layout.md"
+      ]
+    },
+    {
+      "name": "workflow-literature-review",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/dewey-commands.md",
+        "references/social-science-quality.md",
+        "scripts/semantic_scholar_search.py"
+      ]
+    },
+    {
+      "name": "workflow-model-selection",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/local-inference.md",
+        "references/requested-models.md",
+        "scripts/check_requested_models.py"
+      ]
+    },
+    {
+      "name": "workflow-next-step-routing",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "workflow-paper-processing-abstracts",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "workflow-plan-template",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/decision-points.md",
+        "references/deliverable-previews.md",
+        "references/pilot-decisions.md",
+        "references/simulation-plans.md"
+      ]
+    },
+    {
+      "name": "workflow-publish-study",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "workflow-publish-topic",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "workflow-session-start",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/communication.md",
+        "references/evidence-gates.md",
+        "references/materials-and-sampling.md"
+      ]
+    },
+    {
+      "name": "workflow-study-index",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "name": "workflow-tutorial",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md",
+        "references/ep-platform-principles.md",
+        "references/tutorial-mode-rules.md"
+      ]
+    },
+    {
+      "name": "workflow-web-scraping",
+      "version": "v0.1.0",
+      "files": [
+        "SKILL.md"
+      ]
+    }
+  ]
+}

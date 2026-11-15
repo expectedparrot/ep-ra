@@ -1,0 +1,6 @@
+{
+  "$schema": "https://pi.dev/schemas/settings.schema.json",
+  "skills": ["./research_agent/skills"],
+  "extensions": ["./.pi/extensions/research-approval.ts"],
+  "enableSkillCommands": true
+}

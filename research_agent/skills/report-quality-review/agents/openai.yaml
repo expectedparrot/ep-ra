@@ -1,0 +1,4 @@
+interface:
+  display_name: "Report Quality Review"
+  short_description: "Review reports with Katz before delivery"
+  default_prompt: "Use $report-quality-review to review and correct this report before presenting it."

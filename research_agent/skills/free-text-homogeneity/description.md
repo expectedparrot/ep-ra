@@ -1,0 +1,1 @@
+Explains the free-text homogeneity problem in AI simulations — why responses look similar across personas — and provides design techniques to reduce it, detection code to measure it after a run, and honest disclosure language for reports.
