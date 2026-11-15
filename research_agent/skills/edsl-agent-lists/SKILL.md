@@ -12,34 +12,46 @@ tags: [edsl, reference, data-collection]
 Create the smallest reproducible pipeline that produces the requested local
 artifact. Do not add a report or publishing step unless the user requested it.
 
-## Required workflow
+## Choose the workflow
 
-1. After plan approval, load `skill:workflow-file-layout` and use its
-   `agent-list` template. Supply the expected count, every required trait, and
-   `--required-source-domain` when the user requires an authoritative domain.
-   Trust its manifest; do not inspect or replace scaffold-owned files.
-2. If current web data supplies the members or traits, load
-   `skill:workflow-web-scraping` before fetching anything. For a known
-   structured directory, use Firecrawl to discover or confirm the canonical
-   machine-readable source. Use the
-   authoritative source named or implied by the user. Do not silently replace
-   an authoritative source with Wikipedia or another secondary source; stop
-   and disclose the source problem if the required fields cannot be obtained.
-3. Keep source bytes out of generated code. Save the official XML, JSON, CSV,
-   or HTML response under `data/raw/` with a bounded download, then write a
-   short normalizer that reads that file and produces the scaffold-owned
-   `agents.csv`. Never paste records or a complete response into a Python
-   string literal. Record source URL, retrieval date, raw-source path, and its
-   SHA-256 in `provenance.json`. Do not probe ambient Python packages or install
-   scraping dependencies.
-4. Run `make -C <absolute-study-root> agent-list qa workflow-verify`. The
-   scaffold uses `ep agents create --name-field name` to build
-   `data/cooked/agent_list.ep`, then validates it through
-   `AgentList.git.load(...)`. Do not call `.save(...)`, invent `.json.gz`
-   output, or repair a gate to accept a different artifact format/path. Fix the
-   producer when `agent_list.ep` is absent or invalid.
-5. Present `data/cooked/agent_list.ep` with the scaffold-owned target and give
-   a concise validation/provenance summary.
+For a one-off or small agent list, use the quick path: create the requested
+artifact in the active project (or the location the user specifies), with only
+the source and provenance files needed to make it useful. Do not require a study
+scaffold, formal plan, Makefile, or workflow gates. Validate the saved `.ep`
+artifact by loading it and checking the requested count, names, traits, and
+other stated requirements.
+
+Use the managed-study path when the user requests reproducibility, progress
+tracking, multiple dependent phases, or an agent list as part of a full study.
+Then, after plan approval, load `skill:workflow-file-layout` and use its
+`agent-list` template. Supply the expected count, every required trait, and
+`--required-source-domain` when the user requires an authoritative domain.
+Trust its manifest; do not inspect or replace scaffold-owned files.
+
+For either path, if current web data supplies the members or traits, load
+`skill:workflow-web-scraping` before fetching anything. For a known structured
+directory, use Firecrawl to discover or confirm the canonical machine-readable
+source. Use the authoritative source named or implied by the user. Do not
+silently replace an authoritative source with Wikipedia or another secondary
+source; stop and disclose the source problem if the required fields cannot be
+obtained.
+Keep source bytes out of generated code. For managed studies, save the official
+XML, JSON, CSV, or HTML response under `data/raw/`; for quick artifacts, keep
+the raw response in a clearly named local source file when needed. Use a bounded
+download, then write a short normalizer that reads that file. Never paste
+records or a complete response into a Python string literal. Record source URL,
+retrieval date, raw-source path, and its SHA-256 when sourcing current web data.
+Do not probe ambient Python packages or install scraping dependencies.
+
+For managed studies, run
+`make -C <absolute-study-root> agent-list qa workflow-verify`. The scaffold
+uses `ep agents create --name-field name` to build
+`data/cooked/agent_list.ep`, then validates it through
+`AgentList.git.load(...)`. Do not call `.save(...)`, invent `.json.gz` output,
+or repair a gate to accept a different artifact format/path. Fix the producer
+when `agent_list.ep` is absent or invalid.
+Present the saved `.ep` artifact and give a concise validation/provenance
+summary. Use the scaffold-owned target for managed studies.
 
 ## Construction invariants
 
@@ -50,15 +62,17 @@ artifact. Do not add a report or publishing step unless the user requested it.
 - All agents must share the same instruction string. Put individuality in
   traits, not per-agent instructions.
 - Validate exact count, unique names, required-trait completeness, and every
-  domain invariant approved in the plan.
+  domain invariant the user specified (or approved in a managed-study plan).
 - Treat raw-source separation as a completion invariant. The scaffold QA
   verifies the raw file and checksum and rejects Python string literals larger
-  than 4 KiB, which usually indicate embedded source data.
+  than 4 KiB, which usually indicate embedded source data, for managed studies.
+  For quick artifacts, keep source data separate from code and preserve source
+  details when using current web data.
 - For constructed combinations or ordered lists, shuffle with a recorded fixed
   seed only when downstream truncation could bias the sample. Preserve source
   order when it has substantive meaning.
 
-## Direct construction when no scaffold is needed
+## Quick path: direct construction when suitable
 
 For a tiny in-memory list, the persistence boundary is still mandatory:
 

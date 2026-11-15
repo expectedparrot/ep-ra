@@ -8,7 +8,13 @@ description: >
 tags: [workflow, file-organization]
 ---
 
-# Create a study layout
+# Managed study layout
+
+Use this skill only when the user requests or chooses a managed study with a
+formal plan, reproducibility, progress tracking, or multiple dependent phases.
+Do not use it for a quick one-off artifact such as a standalone agent list or
+draft survey; those belong in the active project and follow their owner skill's
+focused validation.
 
 Create the neutral scaffold with both commands before writing `plan.md`:
 

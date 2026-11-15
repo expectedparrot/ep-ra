@@ -12,6 +12,21 @@ tags: [study-type, market-research, quantitative, opinion]
 
 Design the smallest useful survey.
 
+## Choose the workflow
+
+For a clearly scoped, standalone survey draft, use the quick path: create the
+requested survey artifact in the active project (or the user's chosen location)
+and validate it using the relevant EDSL survey guidance. Do not require a study
+directory, `plan.md`, Makefile, or formal gates. Creating a survey does not
+authorize paid inference, deployment, or publishing; obtain the applicable
+separate approval before those actions.
+
+Use the managed-study path when the user requests a full study, formal plan,
+reproducibility, progress tracking, multiple dependent phases, or a report from
+collected results. Ask which path they prefer when both reasonably fit and the
+choice changes the work. A clearly small request defaults to quick; an explicit
+full-study request defaults to managed.
+
 ## Capability questions during design
 
 For designs combining background AI steps, dynamic options, or adaptive
@@ -56,9 +71,10 @@ path.
    `skill:workflow-model-selection` and confirm the exact current identifier
    with `ep models` for hosted inference, or the local-endpoint reference for
    self-hosted models; never propose an unconfirmed family alias from memory.
-7. Use the neutral scaffold from `skill:workflow-file-layout` first.
-   Write and present `plan.md`; obtain approval before applying the survey
-   template, and separate spend approval before inference.
+7. For a managed study, use the neutral scaffold from
+   `skill:workflow-file-layout` first. Write and present `plan.md`; obtain
+   approval before applying the survey template, and separate spend approval
+   before inference. The quick path does not require a study plan or template.
 8. At implementation, load `skill:edsl-surveys`. Load
    `skill:edsl-surveys-cost` only after `jobs.ep` exists.
 9. Run the proportional review from `skill:post-run-review`. For a clean small

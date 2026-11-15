@@ -12,7 +12,12 @@ tags: [edsl, reference]
 
 During design, read [composition contracts](references/composition-contracts.md)
 for mixed survey/interview flows, messages, and groups. Construction starts
-after approval.
+after the design is clear. For a standalone survey draft on the quick path,
+create a focused source file and save the requested EDSL object in the active
+project; do not require a study scaffold, formal plan, Makefile, or workflow
+gates. Use the managed-study scaffold steps below only when the user requests or
+chooses a managed study. Creating a survey does not authorize paid inference,
+deployment, or publishing.
 
 ## When the researcher wants to edit the survey themselves
 
@@ -24,7 +29,7 @@ rebuild. A request to self-edit is not permission to upload local content: the
 publishing owner must explain the remote handoff and receive explicit consent
 before `ep push`.
 
-Use saved source files and the stable CLI boundary:
+For managed studies, use saved source files and the stable CLI boundary:
 
 1. Use the survey scaffold from `skill:workflow-file-layout`. Its manifest
    names this skill as required and lists every `next_edits` source. Read them

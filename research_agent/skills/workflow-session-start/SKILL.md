@@ -18,11 +18,11 @@ Read `references/agent-core.md` as part of orientation. It defines shared
 behavior across harnesses, including carrying out requested research outcomes
 instead of stopping at general advice.
 
-For work that creates or changes a durable study, load
-`skill:workflow-file-layout` now, before allocating a new study or writing
-study files. Keep its layout and execution rules for every later phase,
+Use the quick path for a clearly scoped, one-off artifact. Load
+`skill:workflow-file-layout` only when the user requests or chooses a managed
+study. That skill's scaffold and execution rules apply to managed studies,
 including pilots. Loading it does not authorize substantive work before plan
-approval. Pure discovery and exploratory conversation do not require it.
+approval. Quick artifacts do not need a study scaffold or formal plan.
 
 ## Find an earlier Research Agent conversation
 
@@ -65,8 +65,11 @@ silently substitute direct API calls or claim the archived session was checked.
 
 ## Orient and hand off
 
-1. Inspect prior work and allocate the next neutral study with one bounded call
-   from the active workspace root. If the request might mean continuing prior
+1. Allocate a study only for the managed-study path. For a quick artifact,
+   work in the active project or the location the user specifies; do not run
+   `ep study start`. For a managed study, inspect prior work and allocate the
+   next neutral study with one bounded call from the active workspace root. If
+   the request might mean continuing prior
    work, first add `--no-create`; after the user chooses fresh work, repeat
    without it:
 
@@ -104,7 +107,7 @@ silently substitute direct API calls or claim the archived session was checked.
    when new input or a phase transition—especially AI simulation to human
    fielding—changes which consequences or owner skills apply.
 7. Do not initialize workflow state or method/package state during orientation.
-   For a durable study, the command creates only the neutral study directory,
+   For a managed study, the command creates only the neutral study directory,
    with no blank files. Once proceeding with a new durable study, execute its
    returned template-free `ep study scaffold` command once, following the
    already-loaded `skill:workflow-file-layout`, before writing `plan.md`.
@@ -112,9 +115,10 @@ silently substitute direct API calls or claim the archived session was checked.
    Create `plan.md` with the Write tool after loading
    `skill:workflow-plan-template`; do not Read a nonexistent placeholder. Do not
    create surveys, agents, jobs, package projects,
-   or other substantive study files until the user approves `plan.md`. Skip all
-   scaffolding for orientation, exploratory conversation, simple questions,
-   and requests without a durable study or deliverable.
+   or other substantive study files until the user approves `plan.md`. For a
+   quick artifact, skip study allocation, scaffolding, and plan approval; create
+   the requested artifact and any necessary supporting files in the active
+   project, then use the owning skill's focused validation.
 
 Read [communication.md](references/communication.md) only when the user's
 desired technical depth is unclear or they correct the agent's register.
@@ -122,19 +126,23 @@ desired technical depth is unclear or they correct the agent's register.
 Read [materials-and-sampling.md](references/materials-and-sampling.md) only for
 large panels, claims of representativeness, or user-supplied files/images.
 
-## Durable work
+## Managed studies
 
-After orientation, substantive work follows the system workflow: load the task
+After orientation, managed studies follow the system workflow: load the task
 owner, clarify the design, create the neutral standard study scaffold, write
 and obtain approval for `<study>/plan.md`, then initialize method-specific
 state and artifacts. The neutral scaffold does not authorize paid inference or
-substantive execution. Load `skill:workflow-completion-checklist` only at final
-verification, not when scaffolding begins.
+substantive execution. Quick artifacts follow their owner skill and do not
+inherit the study scaffold, plan, or gate requirements. Load
+`skill:workflow-completion-checklist` only at final verification, not when
+scaffolding begins.
 
-After approval, every EDSL survey, including a pilot, uses the survey template
-from the already-loaded `skill:workflow-file-layout`. Load `skill:edsl-surveys`
-before writing survey Python, and use the manifest's sources and phase commands;
-the template owns workflow setup. For other methods, follow their owner skill.
+After approval, every managed EDSL survey, including a pilot, uses the survey
+template from the already-loaded `skill:workflow-file-layout`. A quick
+standalone survey follows `skill:research-survey` and `skill:edsl-surveys`
+without requiring a study template. For managed surveys, use the manifest's
+sources and phase commands; the template owns workflow setup. For other
+methods, follow their owner skill.
 Only when no template owns workflow setup, define the evidence-backed workflow
 manually in the study root. Read
 [evidence-gates.md](references/evidence-gates.md) when choosing or operating
