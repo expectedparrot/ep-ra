@@ -4,7 +4,6 @@ set -euo pipefail
 
 EP_AGENT_ROOT=$(CDPATH= cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 EP_AGENT_MARKER=".ep-agent-managed-skill"
-EP_AGENT_RUNTIME_INSTALLED=0
 
 ep_agent_setup_runtime() {
     local install_runtime=1
@@ -34,7 +33,6 @@ EOF
             return 127
         fi
         (cd "$EP_AGENT_ROOT" && uv sync --frozen --no-dev)
-        EP_AGENT_RUNTIME_INSTALLED=1
     fi
 }
 
@@ -113,20 +111,4 @@ ep_agent_install_skills() {
     done
 
     printf 'Installed %d EP Agent skills in %s\n' "${#skill_dirs[@]}" "$target_dir"
-}
-
-ep_agent_print_runtime_note() {
-    if ((EP_AGENT_RUNTIME_INSTALLED)); then
-        printf '\nThe locked EP Python/EDSL runtime was installed in %s/.venv.\n' "$EP_AGENT_ROOT"
-    fi
-    cat <<EOF
-
-The Expected Parrot API key is configured and verified by EDSL. Authenticate the
-selected harness with its model provider separately. When using Codex,
-OpenCode, or the Claude plugin from a different project, activate this
-checkout's runtime before starting it:
-  source "$EP_AGENT_ROOT/.venv/bin/activate"
-
-The ep-cli.sh and ep-pi.sh launchers activate the locked runtime themselves.
-EOF
 }

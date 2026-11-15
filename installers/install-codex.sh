@@ -18,11 +18,5 @@ ep_agent_install_skills \
     "$EP_AGENT_ROOT/research_agent/skills" \
     "$EP_AGENT_ROOT/harnesses/codex/skills"
 
-cat <<'EOF'
-
-EP Agent skills are available globally to Codex. Start Codex in the project
-where you want to work and ask your research question. The Codex plugin
-marketplace remains available if you prefer to install the plugin through the
-Codex Plugins interface.
-EOF
-ep_agent_print_runtime_note
+printf '\nEP Agent is ready in Codex.\n'
+printf 'Next: run Codex in your research folder and describe your question.\n'

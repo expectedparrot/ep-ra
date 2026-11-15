@@ -21,8 +21,13 @@ pi install git:github.com/expectedparrot/ep-ra@<release-tag>
 ```
 
 For EDSL commands, activate the checkout's `.venv` in the shell that launches
-Pi. The installer prints the activation command. Pi provider sign-in is managed
-by Pi, for example `pi auth login anthropic`.
+Pi:
+
+```bash
+source /path/to/ep-ra/.venv/bin/activate
+```
+
+Pi provider sign-in is managed by Pi, for example `pi auth login anthropic`.
 
 ## Optional web extraction
 

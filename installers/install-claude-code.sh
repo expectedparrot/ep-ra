@@ -21,6 +21,5 @@ if ! claude plugin list 2>/dev/null | grep -Fq 'ep-agent@expected-parrot'; then
     claude plugin install ep-agent@expected-parrot
 fi
 
-printf 'EP Agent is installed in Claude Code. Start a new Claude Code session to use it.\n'
-printf 'For the full locked local runtime, use %s/ep-cli.sh\n' "$EP_AGENT_ROOT"
-ep_agent_print_runtime_note
+printf '\nEP Agent is ready in Claude Code.\n'
+printf 'Next: start Claude Code in your research folder and describe your question.\n'

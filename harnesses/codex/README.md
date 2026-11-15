@@ -19,4 +19,8 @@ You can also install the plugin through the Codex desktop app. Add the
 Expected Parrot marketplace, select EP Agent, and follow its setup steps.
 
 For research commands that use EDSL, activate the checkout's `.venv` in the
-shell that launches Codex. The installer prints the activation command.
+shell that launches Codex:
+
+```bash
+source /path/to/ep-ra/.venv/bin/activate
+```

@@ -13,8 +13,13 @@ fi
 ep_agent_setup_runtime "$@"
 ep_agent_require_api_key
 
-pi install "$EP_AGENT_ROOT"
+install_log=$(mktemp)
+if ! pi install "$EP_AGENT_ROOT" >"$install_log" 2>&1; then
+    cat "$install_log" >&2
+    rm "$install_log"
+    exit 1
+fi
+rm "$install_log"
 
-printf 'EP Agent is installed in Pi. Start Pi in the project where you want to work.\n'
-printf 'For the full locked local runtime, use %s/ep-pi.sh\n' "$EP_AGENT_ROOT"
-ep_agent_print_runtime_note
+printf '\nEP Agent is ready in Pi.\n'
+printf 'Next: run Pi in your research folder and describe your question.\n'

@@ -28,4 +28,8 @@ OpenCode configuration, replacing `<release-tag>` with the version you want:
 ```
 
 For EDSL commands, activate the checkout's `.venv` in the shell that launches
-OpenCode. The installer prints the activation command.
+OpenCode:
+
+```bash
+source /path/to/ep-ra/.venv/bin/activate
+```

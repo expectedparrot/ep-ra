@@ -74,8 +74,8 @@ workflow. Use them only in a checkout and workspace you trust. The agent still
 uses separate approval checkpoints for paid research and consequential actions.
 
 For Codex and OpenCode, start the harness in your research project after
-installing the skills. EDSL-backed workflows need the checkout's `.venv` on
-`PATH`; the installer prints the activation command.
+installing the skills. For EDSL commands, activate the installed runtime in
+that shell first with `source /path/to/ep-ra/.venv/bin/activate`.
 
 ## Update or uninstall
 

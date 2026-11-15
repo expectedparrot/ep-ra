@@ -17,10 +17,5 @@ ep_agent_install_skills \
     "$HOME/.config/opencode/skills" \
     "$EP_AGENT_ROOT/research_agent/skills"
 
-cat <<'EOF'
-
-EP Agent skills are available globally to OpenCode. Start OpenCode in the
-project where you want to work and ask your research question. Re-run this
-installer after updating the EP Agent checkout to refresh installed skills.
-EOF
-ep_agent_print_runtime_note
+printf '\nEP Agent is ready in OpenCode.\n'
+printf 'Next: run OpenCode in your research folder and describe your question.\n'
