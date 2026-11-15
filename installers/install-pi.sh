@@ -21,5 +21,19 @@ if ! pi install "$EP_AGENT_ROOT" >"$install_log" 2>&1; then
 fi
 rm "$install_log"
 
+provider_login="skipped"
+if [[ -t 0 ]]; then
+    printf '\nPi needs a model provider for conversations. You can sign in now or later.\n'
+    read -r -p 'Provider ID to sign in now (for example anthropic or openai; Enter to skip): ' provider
+    if [[ -n "$provider" ]]; then
+        pi auth login "$provider"
+        provider_login="complete"
+    fi
+fi
+
 printf '\nEP Agent is ready in Pi.\n'
-printf 'Next: run Pi in your research folder and describe your question.\n'
+if [[ "$provider_login" == "complete" ]]; then
+    printf 'Next: run Pi in your research folder and describe your question.\n'
+else
+    printf 'Next: run Pi, use /login to connect a model provider, then describe your question.\n'
+fi

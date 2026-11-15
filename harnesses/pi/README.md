@@ -11,8 +11,10 @@ the universal installer and choose Pi:
 
 The installer launches EDSL's `ep auth login` flow when an Expected Parrot key
 is not already configured, prepares the locked Python and EDSL runtime, and
-adds EP Agent to Pi. Start Pi in the project where you want to work and describe
-your research task. Rerun the installer after updating the checkout.
+adds EP Agent to Pi. It then offers to sign in to a model provider; you can
+also do this later from Pi with `/login`. Start Pi in the project where you
+want to work and describe your research task. Rerun the installer after
+updating the checkout.
 
 To install a published release directly with Pi:
 
