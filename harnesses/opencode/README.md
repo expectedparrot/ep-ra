@@ -21,7 +21,7 @@ OpenCode configuration, replacing `<release-tag>` with the version you want:
 {
   "$schema": "https://opencode.ai/config.json",
   "skills": [
-    "https://raw.githubusercontent.com/expectedparrot/ep-agent/<release-tag>/research_agent/skills/"
+    "https://raw.githubusercontent.com/expectedparrot/ep-ra/<release-tag>/research_agent/skills/"
   ]
 }
 ```

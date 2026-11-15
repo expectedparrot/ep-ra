@@ -18,7 +18,7 @@ To install from GitHub's plugin marketplace instead, use Claude Code's plugin
 commands:
 
 ```text
-/plugin marketplace add expectedparrot/ep-agent
+/plugin marketplace add expectedparrot/ep-ra
 /plugin install ep-agent@expected-parrot
 ```
 

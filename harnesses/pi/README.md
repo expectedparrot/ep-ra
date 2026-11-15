@@ -17,7 +17,7 @@ after updating the checkout.
 To install a published release directly with Pi:
 
 ```bash
-pi install git:github.com/expectedparrot/ep-agent@<release-tag>
+pi install git:github.com/expectedparrot/ep-ra@<release-tag>
 ```
 
 For EDSL commands, activate the checkout's `.venv` in the shell that launches

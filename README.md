@@ -17,8 +17,8 @@ create evidence-based reports.
 Clone this repository and run the universal installer:
 
 ```bash
-git clone https://github.com/expectedparrot/ep-agent.git
-cd ep-agent
+git clone https://github.com/expectedparrot/ep-ra.git
+cd ep-ra
 ./install.sh
 ```
 
