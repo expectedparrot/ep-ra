@@ -15,6 +15,12 @@ adds EP Agent skills to `~/.config/opencode/skills/`. Start OpenCode in your
 research project and describe the task. Rerun the installer after updating the
 checkout.
 
+To start a session, open a terminal in your research project and run:
+
+```bash
+source /path/to/ep-ra/.venv/bin/activate && opencode
+```
+
 For a release installation, add the EP Agent skills catalog URL to your
 OpenCode configuration, replacing `<release-tag>` with the version you want:
 

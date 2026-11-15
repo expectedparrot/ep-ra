@@ -18,4 +18,4 @@ ep_agent_install_skills \
     "$EP_AGENT_ROOT/research_agent/skills"
 
 printf '\nEP Agent is ready in OpenCode.\n'
-printf 'Next: run OpenCode in your research folder and describe your question.\n'
+ep_agent_print_next_command opencode

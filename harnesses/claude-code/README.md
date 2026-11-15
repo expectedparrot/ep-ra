@@ -14,6 +14,12 @@ locked Python and EDSL runtime, and adds the checkout as a Claude Code plugin
 marketplace. Start a new Claude Code session after installation. Rerun the
 installer after updating the checkout.
 
+To start a session, open a terminal in your research project and run:
+
+```bash
+source /path/to/ep-ra/.venv/bin/activate && claude
+```
+
 To install from GitHub's plugin marketplace instead, use Claude Code's plugin
 commands:
 

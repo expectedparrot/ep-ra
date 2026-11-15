@@ -33,7 +33,8 @@ fi
 
 printf '\nEP Agent is ready in Pi.\n'
 if [[ "$provider_login" == "complete" ]]; then
-    printf 'Next: run Pi in your research folder and describe your question.\n'
+    ep_agent_print_next_command pi
 else
-    printf 'Next: run Pi, use /login to connect a model provider, then describe your question.\n'
+    printf 'Next: connect your model provider in Pi with /login, then from the project where you want to work, run:\n'
+    printf '  source "%s/.venv/bin/activate" && pi\n' "$EP_AGENT_ROOT"
 fi

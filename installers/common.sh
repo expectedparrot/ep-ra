@@ -112,3 +112,9 @@ ep_agent_install_skills() {
 
     printf 'Installed %d EP Agent skills in %s\n' "${#skill_dirs[@]}" "$target_dir"
 }
+
+ep_agent_print_next_command() {
+    local harness_command="$1"
+    printf '\nNext: from the project where you want to work, run:\n'
+    printf '  source "%s/.venv/bin/activate" && %s\n' "$EP_AGENT_ROOT" "$harness_command"
+}

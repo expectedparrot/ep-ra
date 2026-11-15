@@ -22,4 +22,4 @@ if ! claude plugin list 2>/dev/null | grep -Fq 'ep-agent@expected-parrot'; then
 fi
 
 printf '\nEP Agent is ready in Claude Code.\n'
-printf 'Next: start Claude Code in your research folder and describe your question.\n'
+ep_agent_print_next_command claude

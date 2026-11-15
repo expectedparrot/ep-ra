@@ -16,6 +16,12 @@ also do this later from Pi with `/login`. Start Pi in the project where you
 want to work and describe your research task. Rerun the installer after
 updating the checkout.
 
+To start a session, open a terminal in your research project and run:
+
+```bash
+source /path/to/ep-ra/.venv/bin/activate && pi
+```
+
 When a workflow presents a local artifact with `ep present`, the EP Agent Pi
 extension opens it with your system's default application. For example, HTML
 opens in a browser and DOCX opens in a document editor. If the system opener is

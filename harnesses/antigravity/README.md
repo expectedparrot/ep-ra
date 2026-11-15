@@ -17,6 +17,15 @@ Parrot API key (or guides you through login), then installs EP Agent's skills
 globally in `~/.gemini/config/skills/`. Restart Antigravity or reload its skills
 to see them in the agent's Customizations panel.
 
+The EP Agent installer does not install the Antigravity app or CLI. To use
+Antigravity from a terminal, install its CLI using Google's command, then start
+it from your research project:
+
+```bash
+curl -fsSL https://antigravity.google/cli/install.sh | bash
+source /path/to/ep-ra/.venv/bin/activate && agy
+```
+
 Google account sign-in and model selection use Antigravity's normal setup.
 Open a project folder in Antigravity, then describe the research task you want
 to complete. Keep the EP Agent checkout available for its locked EDSL runtime;

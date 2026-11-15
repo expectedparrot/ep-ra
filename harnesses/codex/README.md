@@ -15,6 +15,12 @@ adds EP Agent skills to `~/.agents/skills/`. Start Codex in the project where
 you want to work and describe your research task. Rerun the installer after
 updating the checkout.
 
+To start a session, open a terminal in your research project and run:
+
+```bash
+source /path/to/ep-ra/.venv/bin/activate && codex
+```
+
 You can also install the plugin through the Codex desktop app. Add the
 Expected Parrot marketplace, select EP Agent, and follow its setup steps.
 

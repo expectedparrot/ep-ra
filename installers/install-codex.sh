@@ -19,4 +19,4 @@ ep_agent_install_skills \
     "$EP_AGENT_ROOT/harnesses/codex/skills"
 
 printf '\nEP Agent is ready in Codex.\n'
-printf 'Next: run Codex in your research folder and describe your question.\n'
+ep_agent_print_next_command codex
