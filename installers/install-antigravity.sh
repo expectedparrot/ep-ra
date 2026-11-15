@@ -71,6 +71,10 @@ for runtime_path in runtime_paths:
     if rule not in allowed:
         allowed.append(rule)
 
+network_rule = "read_url(expectedparrot.com)"
+if network_rule not in allowed:
+    allowed.append(network_rule)
+
 settings_path.parent.mkdir(parents=True, exist_ok=True)
 mode = settings_path.stat().st_mode & 0o777 if settings_path.exists() else 0o600
 fd, temporary_name = tempfile.mkstemp(dir=settings_path.parent, prefix="settings.", suffix=".tmp")
@@ -94,6 +98,6 @@ ep_agent_install_skills \
     "$EP_AGENT_ROOT/harnesses/antigravity/skills"
 
 printf '\nGoogle Antigravity CLI and EP Agent skills are ready.\n'
-printf 'Antigravity can read the EP Agent runtime and its Python interpreter inside its sandbox.\n'
+printf 'Antigravity can access the EP runtime and Expected Parrot API from its sandbox.\n'
 printf 'Next: from the project where you want to work, run:\n'
 printf '  source "%s/.venv/bin/activate" && %s\n' "$EP_AGENT_ROOT" "$agy_command"

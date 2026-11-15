@@ -14,8 +14,9 @@ also prepares the locked EDSL runtime, verifies the required Expected Parrot
 API key (or guides you through login), and installs EP Agent's skills globally
 in `~/.gemini/config/skills/`. It adds read-only sandbox access to this
 checkout's virtual environment and its Python runtime so EP commands can run
-without repeated access prompts. Other Antigravity sandbox protections remain
-enabled.
+without repeated access prompts. It also allows sandboxed network requests to
+`expectedparrot.com` and its subdomains for EP API access. Other Antigravity
+sandbox protections remain enabled.
 
 ## Start
 
