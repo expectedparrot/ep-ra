@@ -1,14 +1,16 @@
 # EP Agent
 
 EP Agent provides research skills and specialist workflows for Claude Code,
-Codex, OpenCode, Pi, and the Google Antigravity CLI. It helps plan and carry out
-studies with EDSL and create evidence-based reports.
+Codex, OpenCode, Pi, Google Antigravity CLI, Vercel fx, and DeepSeek Harness.
+It helps plan and carry out studies with EDSL and create evidence-based
+reports.
 
 ## Requirements
 
 - macOS, Linux, or WSL
-- One supported AI harness (install Claude Code, Codex, or Pi first; OpenCode
-  and the Antigravity CLI are installed by their installers)
+- One supported AI harness (install Claude Code, Codex, or Pi first; OpenCode,
+  Antigravity CLI, and Vercel fx are installed by their installers; DeepSeek
+  Harness requires Node.js and npm)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - An Expected Parrot API key (required during installation)
 - A model provider account configured in your chosen harness
@@ -23,12 +25,12 @@ cd ep-ra
 ./install.sh
 ```
 
-The installer lets you select Claude Code, Codex, OpenCode, Pi, or Google
-Antigravity CLI. It installs OpenCode and the Antigravity CLI if needed,
-prepares the locked EDSL runtime, verifies an existing Expected Parrot API key
-or guides you through EDSL's `ep auth login` flow, then installs EP Agent for
-the selected harness. The key is required; setup stops if authentication cannot
-be verified.
+The installer lets you select Claude Code, Codex, OpenCode, Pi, Google
+Antigravity CLI, Vercel fx, or DeepSeek Harness. It installs OpenCode,
+Antigravity CLI, and fx if needed, prepares the locked EDSL runtime, verifies
+an existing Expected Parrot API key or guides you through EDSL's `ep auth
+login` flow, then installs EP Agent for the selected harness. The key is
+required; setup stops if authentication cannot be verified.
 If you need a key, [create one in your Expected Parrot account](https://www.expectedparrot.com/getting-started/edsl-api-keys).
 
 Choose your harness guide:
@@ -40,6 +42,8 @@ Choose your harness guide:
 | OpenCode CLI | Select it in the installer | [OpenCode](harnesses/opencode/README.md) |
 | Pi | Select it in the installer | [Pi](harnesses/pi/README.md) |
 | Google Antigravity CLI | Select it in the installer | [Google Antigravity](harnesses/antigravity/README.md) |
+| Vercel fx | Select it in the installer | [Vercel fx](harnesses/fx/README.md) |
+| DeepSeek Harness (developer preview) | Select it in the installer | [DeepSeek Harness](harnesses/deepseek-harness/README.md) |
 
 ## Optional Anthropic document skills
 
@@ -55,9 +59,9 @@ This installs the skills from Anthropic's marketplace, outside the EP Agent
 checkout. See the [official Anthropic skills repository](https://github.com/anthropics/skills)
 for other Anthropic-supported ways to use them.
 
-The installer does not install Claude Code, Codex, or Pi. OpenCode and the
-Antigravity CLI are installed when selected. Model-provider sign-in uses each
-harness's normal sign-in flow.
+The installer does not install Claude Code, Codex, or Pi. OpenCode, the
+Antigravity CLI, and fx are installed when selected. DeepSeek Harness runs
+through `npx`. Model-provider sign-in uses each harness's normal sign-in flow.
 
 ## Start a research session
 
@@ -77,9 +81,9 @@ These launchers set harness permission options so the agent can carry out its
 workflow. Use them only in a checkout and workspace you trust. The agent still
 uses separate approval checkpoints for paid research and consequential actions.
 
-For Codex and OpenCode, start the harness in your research project after
-installing the skills. For EDSL commands, activate the installed runtime in
-that shell first with `source /path/to/ep-ra/.venv/bin/activate`.
+For Codex, OpenCode, fx, and DeepSeek Harness, start the harness in your
+research project after installing the skills. For EDSL commands, activate the
+installed runtime in that shell first with `source /path/to/ep-ra/.venv/bin/activate`.
 
 ## Update or uninstall
 

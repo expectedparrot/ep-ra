@@ -11,7 +11,8 @@ Usage: ./install.sh
 
 Choose a supported AI harness, configure and verify your required Expected
 Parrot API key, and install EP Agent for that harness. OpenCode and the
-Antigravity CLI are installed automatically if they are missing.
+Antigravity CLI and Vercel fx are installed automatically if they are missing.
+DeepSeek Harness runs as an experimental local web app through npx.
 EOF
         exit 0
         ;;
@@ -35,18 +36,22 @@ printf '%s\n' 'EP Agent setup' '' \
     '  3) OpenCode' \
     '  4) Pi' \
     '  5) Google Antigravity CLI' \
+    '  6) Vercel fx' \
+    '  7) DeepSeek Harness (developer preview)' \
     '  q) Quit'
 
 while true; do
-    read -r -p 'Harness [1-5]: ' choice
+    read -r -p 'Harness [1-7]: ' choice
     case "$choice" in
         1) installer="$EP_AGENT_ROOT/installers/install-claude-code.sh"; break ;;
         2) installer="$EP_AGENT_ROOT/installers/install-codex.sh"; break ;;
         3) installer="$EP_AGENT_ROOT/installers/install-opencode.sh"; break ;;
         4) installer="$EP_AGENT_ROOT/installers/install-pi.sh"; break ;;
         5) installer="$EP_AGENT_ROOT/installers/install-antigravity.sh"; break ;;
+        6) installer="$EP_AGENT_ROOT/installers/install-fx.sh"; break ;;
+        7) installer="$EP_AGENT_ROOT/installers/install-deepseek-harness.sh"; break ;;
         q|Q) printf 'Setup cancelled.\n'; exit 0 ;;
-        *) printf 'Choose 1, 2, 3, 4, 5, or q.\n' ;;
+        *) printf 'Choose 1, 2, 3, 4, 5, 6, 7, or q.\n' ;;
     esac
 done
 
