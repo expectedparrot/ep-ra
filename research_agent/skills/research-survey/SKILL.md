@@ -61,8 +61,14 @@ path.
    known category such as a favorite color, use multiple choice (including an
    `Other` option if needed) and reserve free text for the follow-up reason;
    do not recover categorical values later with regex.
-3. Default to no memory. Pipe one prior answer with
-   `{{ question_name.answer }}` only for a direct follow-up.
+3. Default to no memory, and do not assume answers carry forward: each question
+   is answered independently unless its text pipes prior answers or the survey
+   uses explicit memory. Pipe every earlier answer that constrains a later
+   question. In a funnel from broad categories to a specific exemplar and then
+   detailed follow-ups, carry each selected category into the exemplar question
+   and carry the exemplar into its follow-ups. This prevents later answers from
+   contradicting earlier selections while keeping memory unnecessary for simple
+   linear follow-ups.
 4. Use scenarios only when the same questions rotate across stimuli, topics,
    or vignettes. A single fixed topic needs no `ScenarioList`.
 5. Vary agent traits that could plausibly change the response. Do not describe

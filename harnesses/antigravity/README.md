@@ -31,8 +31,9 @@ On first launch, sign in with your Google account when Antigravity prompts you.
 The desktop app is separate; download it from [Google Antigravity](https://antigravity.google/download).
 
 Antigravity does not interpret EDSL's `PRESENT_FILE` marker as an open-file
-command. EP Agent validates presented files and returns their project-relative
-paths so you can open them in Antigravity's file view.
+command. On macOS, EP Agent asks Antigravity to open presented files with the
+system's default viewer; otherwise it returns their project-relative paths for
+opening in Antigravity's file view.
 
 Google's [Agent Skills documentation](https://antigravity.google/docs/skills)
 covers skill discovery. See the [Antigravity IDE side panel guide](https://antigravity.google/docs/agent-side-panel)

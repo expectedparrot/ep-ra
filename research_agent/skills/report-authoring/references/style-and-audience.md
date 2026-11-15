@@ -203,7 +203,7 @@ If the user provides materials, read them before writing and note the
 patterns that matter: vocabulary register, sentence length, heading style,
 how statistics are presented, how charts are captioned, and whether
 conclusions are stated directly or hedged. Record these in
-`writeup/report_style.md`. The user's house style takes precedence over
+`analysis/report_style.md`. The user's house style takes precedence over
 the generic defaults in this skill.
 
 ---
@@ -251,9 +251,11 @@ asks for the report with no brief in context, send the brief first.
 
 ## Step 4: Record the confirmed decisions
 
-After confirmation, write the agreed parameters to `writeup/report_style.md`.
+After confirmation, write the agreed parameters to `analysis/report_style.md`.
+Keep `writeup/` reserved for the canonical `report.md` and its rendered
+outputs; the report checker rejects other Markdown files there.
 
-`writeup/report_style.md` (one-liner is fine):
+`analysis/report_style.md` (one-liner is fine):
 
 ```
 Format: written report | Audience: client_external | Purpose: support go/no-go decision |
@@ -441,7 +443,8 @@ terminology, and chart style from the prior report so the two documents
 read as a series. Note any changes in methodology or scope explicitly so
 the reader understands what is and is not comparable.
 
-If the user wants a standalone report, note this decision in `report_style.md`
+If the user wants a standalone report, note this decision in
+`analysis/report_style.md`
 so future sessions do not re-raise it.
 
 ---

@@ -63,6 +63,9 @@ q_why = QuestionFreeText(
 
 # No memory mode needed here: follow-up questions reference q_cuisine's answer
 # directly via piping ({{ favorite_cuisine.answer }}), which is the preferred approach.
+# For a funnel, pipe every prior choice that constrains a later answer. For
+# example, if users select a cooking method and category before naming a recipe,
+# include both answers in the recipe question so it stays within those choices.
 # If a follow-up must repeat once per item of a *list* answer (e.g. they name several
 # cuisines and you want the same 2 questions about each), use
 # Survey([...]).loop_over("cuisines", ask=[...], max_items=N) — see skill:edsl-surveys.

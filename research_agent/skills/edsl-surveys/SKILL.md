@@ -19,6 +19,20 @@ gates. Use the managed-study scaffold steps below only when the user requests or
 chooses a managed study. Creating a survey does not authorize paid inference,
 deployment, or publishing.
 
+## Keep funnel questions consistent
+
+EDSL questions are stateless by default. When a later question depends on an
+earlier choice, pipe every answer that constrains it into its question text or
+use explicit memory. In a funnel such as broad category → specific exemplar →
+follow-up details, pipe the selected category (and any other relevant prior
+category) into the exemplar question, then pipe the exemplar into its
+follow-ups. Do not pipe unrelated answers or add memory when direct piping is
+sufficient.
+
+For example, if respondents first choose a cooking method and a food category,
+the recipe-name question should mention both selected answers so the named
+recipe fits those selections.
+
 ## When the researcher wants to edit the survey themselves
 
 Treat "let me edit it" and similar requests as a visual Builder handoff, not a
@@ -58,6 +72,15 @@ For managed studies, use saved source files and the stable CLI boundary:
    bounded review, complete exports, costs, QA, and plots. For an additional
    structured column, use `ep results export ... --column ... --output <path>`;
    do not rerun overlapping inspection targets or parse review prose.
+   For multi-model studies, ensure the analysis export includes
+   `model.model` and `model.inference_service`; for scenario studies, include
+   `scenario.*`. The current default scaffold export may omit these identifiers,
+   so create a supplemental export under `analysis/` instead of editing its
+   Makefile. Also inspect whether `writeup/plots/` contains any plots: the
+   default plot target can exit successfully without producing files when the
+   results have no numeric summaries. If categorical answer distributions are
+   useful, create horizontal bar charts from their counts in a separate
+   analysis script.
 6. Immediately before writing the report, load `skill:report-authoring`. At
    completion execute `phase_commands.after_report`. Do not
    attest or verify objective gates individually; the target checks the report
