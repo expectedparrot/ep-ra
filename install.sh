@@ -10,8 +10,8 @@ case "${1:-}" in
 Usage: ./install.sh
 
 Choose a supported AI harness, configure and verify your required Expected
-Parrot API key, and install EP Agent for that harness. The Antigravity CLI is
-installed automatically if it is missing.
+Parrot API key, and install EP Agent for that harness. OpenCode and the
+Antigravity CLI are installed automatically if they are missing.
 EOF
         exit 0
         ;;

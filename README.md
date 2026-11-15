@@ -7,8 +7,8 @@ studies with EDSL and create evidence-based reports.
 ## Requirements
 
 - macOS, Linux, or WSL
-- One supported AI harness (install Claude Code, Codex, OpenCode, or Pi first;
-  the Antigravity CLI is installed by its installer)
+- One supported AI harness (install Claude Code, Codex, or Pi first; OpenCode
+  and the Antigravity CLI are installed by their installers)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - An Expected Parrot API key (required during installation)
 - A model provider account configured in your chosen harness
@@ -24,10 +24,11 @@ cd ep-ra
 ```
 
 The installer lets you select Claude Code, Codex, OpenCode, Pi, or Google
-Antigravity CLI. It installs the Antigravity CLI if needed, prepares the locked
-EDSL runtime, verifies an existing Expected Parrot API key or guides you through
-EDSL's `ep auth login` flow, then installs EP Agent for the selected harness.
-The key is required; setup stops if authentication cannot be verified.
+Antigravity CLI. It installs OpenCode and the Antigravity CLI if needed,
+prepares the locked EDSL runtime, verifies an existing Expected Parrot API key
+or guides you through EDSL's `ep auth login` flow, then installs EP Agent for
+the selected harness. The key is required; setup stops if authentication cannot
+be verified.
 If you need a key, [create one in your Expected Parrot account](https://www.expectedparrot.com/getting-started/edsl-api-keys).
 
 Choose your harness guide:
@@ -36,7 +37,7 @@ Choose your harness guide:
 |---|---|---|
 | Claude Code | Select it in the installer | [Claude Code](harnesses/claude-code/README.md) |
 | Codex | Select it in the installer | [Codex](harnesses/codex/README.md) |
-| OpenCode | Select it in the installer | [OpenCode](harnesses/opencode/README.md) |
+| OpenCode CLI | Select it in the installer | [OpenCode](harnesses/opencode/README.md) |
 | Pi | Select it in the installer | [Pi](harnesses/pi/README.md) |
 | Google Antigravity CLI | Select it in the installer | [Google Antigravity](harnesses/antigravity/README.md) |
 
@@ -54,9 +55,9 @@ This installs the skills from Anthropic's marketplace, outside the EP Agent
 checkout. See the [official Anthropic skills repository](https://github.com/anthropics/skills)
 for other Anthropic-supported ways to use them.
 
-The installer does not install Claude Code, Codex, OpenCode, or Pi. It installs
-the Antigravity CLI when selected. Model-provider sign-in uses each harness's
-normal sign-in flow.
+The installer does not install Claude Code, Codex, or Pi. OpenCode and the
+Antigravity CLI are installed when selected. Model-provider sign-in uses each
+harness's normal sign-in flow.
 
 ## Start a research session
 
