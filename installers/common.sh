@@ -39,37 +39,28 @@ EOF
 }
 
 ep_agent_require_api_key() {
-    local api_key="${EXPECTED_PARROT_API_KEY:-}"
-
-    if [[ -z "$api_key" ]] && (cd "$EP_AGENT_ROOT" && uv run --frozen --no-dev ep check >/dev/null 2>&1); then
+    if [[ -z "${EXPECTED_PARROT_API_KEY:-}" ]] && (cd "$EP_AGENT_ROOT" && uv run --frozen --no-dev ep check >/dev/null 2>&1); then
         printf 'An existing Expected Parrot API key was verified.\n'
         return
     fi
 
-    if [[ -z "$api_key" ]]; then
+    if [[ -z "${EXPECTED_PARROT_API_KEY:-}" ]]; then
         cat <<'EOF'
 
 An Expected Parrot API key is required to use EP Agent.
-Get or create one in your account by following:
+Get or create one in your account, then follow the EDSL login prompts:
 https://www.expectedparrot.com/getting-started/edsl-api-keys
 EOF
         if [[ ! -t 0 ]]; then
-            printf 'Run this installer in a terminal so it can securely prompt for your key.\n' >&2
+            printf 'Run this installer in a terminal to complete the EDSL login flow.\n' >&2
             return 2
         fi
-        read -r -s -p 'Expected Parrot API key: ' api_key
-        printf '\n'
+        (cd "$EP_AGENT_ROOT" && uv run --frozen --no-dev ep auth login)
     else
         printf 'Configuring Expected Parrot authentication from EXPECTED_PARROT_API_KEY.\n'
+        (cd "$EP_AGENT_ROOT" && uv run --frozen --no-dev ep auth login --api_key "$EXPECTED_PARROT_API_KEY")
     fi
 
-    if [[ -z "$api_key" ]]; then
-        printf 'An Expected Parrot API key is required. Installation cancelled.\n' >&2
-        return 2
-    fi
-
-    (cd "$EP_AGENT_ROOT" && uv run --frozen --no-dev ep auth login --api_key "$api_key")
-    unset api_key
     (cd "$EP_AGENT_ROOT" && uv run --frozen --no-dev ep check)
 }
 
@@ -130,7 +121,7 @@ ep_agent_print_runtime_note() {
     fi
     cat <<EOF
 
-The Expected Parrot API key is configured and verified. Authenticate the
+The Expected Parrot API key is configured and verified by EDSL. Authenticate the
 selected harness with its model provider separately. When using Codex,
 OpenCode, or the Claude plugin from a different project, activate this
 checkout's runtime before starting it:

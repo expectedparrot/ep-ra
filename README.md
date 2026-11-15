@@ -24,9 +24,9 @@ cd ep-ra
 
 The installer lets you select Claude Code, Codex, OpenCode, or Pi. It installs
 the locked EDSL runtime, verifies an existing Expected Parrot API key or guides
-you through entering one, then installs the selected harness adapter. The key
-is required; setup stops if authentication cannot be verified. If you need a
-key, [create one in your Expected Parrot account](https://www.expectedparrot.com/getting-started/edsl-api-keys).
+you through EDSL's `ep auth login` flow, then installs the selected harness
+adapter. The key is required; setup stops if authentication cannot be verified.
+If you need a key, [create one in your Expected Parrot account](https://www.expectedparrot.com/getting-started/edsl-api-keys).
 
 Choose your harness guide:
 

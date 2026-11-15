@@ -9,10 +9,10 @@ the universal installer and choose Pi:
 ./install.sh
 ```
 
-The installer requires and verifies an Expected Parrot API key, prepares the
-locked Python and EDSL runtime, and adds EP Agent to Pi. Start Pi in the project
-where you want to work and describe your research task. Rerun the installer
-after updating the checkout.
+The installer launches EDSL's `ep auth login` flow when an Expected Parrot key
+is not already configured, prepares the locked Python and EDSL runtime, and
+adds EP Agent to Pi. Start Pi in the project where you want to work and describe
+your research task. Rerun the installer after updating the checkout.
 
 To install a published release directly with Pi:
 

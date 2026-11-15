@@ -30,7 +30,8 @@ skills separately:
 /plugin install document-skills@anthropic-agent-skills
 ```
 
-The installer guides you through creating an Expected Parrot key if needed and
-stores it with the EDSL CLI. The GitHub plugin installation provides skills
-and specialist instructions, but does not configure the local EDSL runtime or
-API key.
+The installer launches EDSL's `ep auth login` flow when an Expected Parrot key
+is not already configured. The login flow stores the key in the checkout's
+ignored `.env` file. The GitHub plugin installation provides skills and
+specialist instructions, but does not configure the local EDSL runtime or API
+key.
