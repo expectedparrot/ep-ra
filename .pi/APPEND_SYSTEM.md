@@ -19,9 +19,9 @@ the user or project has a different established workspace convention.
 - Pi does not provide the Claude `Task`/subagent workflow here. Complete
   specialist work in the current session and do not claim delegated review.
 - When `ep present` returns a `PRESENT_FILE` marker, the EP Agent extension
-  opens text artifacts in Pi's scrollable file viewer. Wait for the user to
-  close the viewer before continuing. Binary files are reported by path because
-  Pi's terminal viewer cannot render them.
+  opens the file with the system's default application. If no system opener is
+  available, text artifacts open in Pi's scrollable file viewer; binary files
+  are reported by path. Wait for the viewer to open before continuing.
 
 ## Research safeguards
 

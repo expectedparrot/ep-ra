@@ -1,6 +1,7 @@
 import type { ExtensionAPI, ExtensionContext } from "@earendil-works/pi-coding-agent";
 import { Type } from "typebox";
 import { readFileSync, statSync } from "node:fs";
+import { spawn } from "node:child_process";
 import { isAbsolute, resolve } from "node:path";
 import { Container, ScrollView, Text } from "@earendil-works/pi-tui";
 
@@ -13,6 +14,26 @@ const PI_SYSTEM_PROMPT = readFileSync(
   "utf8",
 ).trim();
 const APPEND_SYSTEM_PROMPT = `${CORE_SYSTEM_PROMPT}\n\n${PI_SYSTEM_PROMPT}`;
+
+function openWithSystemViewer(path: string): Promise<boolean> {
+  const opener = process.platform === "darwin" ? "open" : "xdg-open";
+  return new Promise((resolveOpen) => {
+    let settled = false;
+    let timeout: ReturnType<typeof setTimeout> | undefined;
+    const finish = (opened: boolean) => {
+      if (settled) return;
+      settled = true;
+      if (timeout) clearTimeout(timeout);
+      resolveOpen(opened);
+    };
+
+    const child = spawn(opener, [path], { detached: true, stdio: "ignore" });
+    child.once("error", () => finish(false));
+    child.once("exit", (code) => finish(code === 0));
+    timeout = setTimeout(() => finish(true), 2000);
+    child.unref();
+  });
+}
 
 async function showPresentedFile(path: string, title: string, ctx: ExtensionContext) {
   if (!ctx.hasUI) return;
@@ -29,6 +50,11 @@ async function showPresentedFile(path: string, title: string, ctx: ExtensionCont
     ctx.ui.notify(`Presented file is empty: ${absolutePath}`, "warning");
     return;
   }
+  if (await openWithSystemViewer(absolutePath)) {
+    ctx.ui.notify(`Opened ${title} in your system viewer.`, "info");
+    return;
+  }
+  ctx.ui.notify("Could not launch the system viewer; showing text in Pi when possible.", "warning");
   if (size > 2_000_000) {
     ctx.ui.notify(`Presented file is too large for Pi's viewer: ${absolutePath}`, "warning");
     return;

@@ -33,17 +33,19 @@ printf '%s\n' 'EP Agent setup' '' \
     '  2) Codex' \
     '  3) OpenCode' \
     '  4) Pi' \
+    '  5) Google Antigravity' \
     '  q) Quit'
 
 while true; do
-    read -r -p 'Harness [1-4]: ' choice
+    read -r -p 'Harness [1-5]: ' choice
     case "$choice" in
         1) installer="$EP_AGENT_ROOT/installers/install-claude-code.sh"; break ;;
         2) installer="$EP_AGENT_ROOT/installers/install-codex.sh"; break ;;
         3) installer="$EP_AGENT_ROOT/installers/install-opencode.sh"; break ;;
         4) installer="$EP_AGENT_ROOT/installers/install-pi.sh"; break ;;
+        5) installer="$EP_AGENT_ROOT/installers/install-antigravity.sh"; break ;;
         q|Q) printf 'Setup cancelled.\n'; exit 0 ;;
-        *) printf 'Choose 1, 2, 3, 4, or q.\n' ;;
+        *) printf 'Choose 1, 2, 3, 4, 5, or q.\n' ;;
     esac
 done
 

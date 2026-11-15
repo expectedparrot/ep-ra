@@ -16,9 +16,10 @@ also do this later from Pi with `/login`. Start Pi in the project where you
 want to work and describe your research task. Rerun the installer after
 updating the checkout.
 
-When a workflow presents a local text artifact with `ep present`, the EP Agent
-Pi extension opens it in a scrollable viewer inside Pi. Binary artifacts are
-reported by path for inspection in an external viewer.
+When a workflow presents a local artifact with `ep present`, the EP Agent Pi
+extension opens it with your system's default application. For example, HTML
+opens in a browser and DOCX opens in a document editor. If the system opener is
+unavailable, text files open in Pi's scrollable viewer.
 
 To install a published release directly with Pi:
 

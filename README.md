@@ -1,8 +1,8 @@
 # EP Agent
 
 EP Agent provides research skills and specialist workflows for Claude Code,
-Codex, OpenCode, and Pi. It helps plan and carry out studies with EDSL and
-create evidence-based reports.
+Codex, OpenCode, Pi, and Google Antigravity. It helps plan and carry out studies
+with EDSL and create evidence-based reports.
 
 ## Requirements
 
@@ -22,10 +22,11 @@ cd ep-ra
 ./install.sh
 ```
 
-The installer lets you select Claude Code, Codex, OpenCode, or Pi. It installs
-the locked EDSL runtime, verifies an existing Expected Parrot API key or guides
-you through EDSL's `ep auth login` flow, then installs the selected harness
-adapter. The key is required; setup stops if authentication cannot be verified.
+The installer lets you select Claude Code, Codex, OpenCode, Pi, or Google
+Antigravity. It installs the locked EDSL runtime, verifies an existing Expected
+Parrot API key or guides you through EDSL's `ep auth login` flow, then installs
+the selected harness adapter. The key is required; setup stops if authentication
+cannot be verified.
 If you need a key, [create one in your Expected Parrot account](https://www.expectedparrot.com/getting-started/edsl-api-keys).
 
 Choose your harness guide:
@@ -36,6 +37,7 @@ Choose your harness guide:
 | Codex | Select it in the installer | [Codex](harnesses/codex/README.md) |
 | OpenCode | Select it in the installer | [OpenCode](harnesses/opencode/README.md) |
 | Pi | Select it in the installer | [Pi](harnesses/pi/README.md) |
+| Google Antigravity | Select it in the installer | [Google Antigravity](harnesses/antigravity/README.md) |
 
 ## Optional Anthropic document skills
 
