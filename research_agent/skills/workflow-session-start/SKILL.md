@@ -14,6 +14,10 @@ tags: [workflow]
 Use this as the first skill for research, study, EDSL-object, or deliverable
 requests. Do not reload it in the same session.
 
+Read `references/agent-core.md` as part of orientation. It defines shared
+behavior across harnesses, including carrying out requested research outcomes
+instead of stopping at general advice.
+
 For work that creates or changes a durable study, load
 `skill:workflow-file-layout` now, before allocating a new study or writing
 study files. Keep its layout and execution rules for every later phase,

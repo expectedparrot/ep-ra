@@ -31,5 +31,4 @@ exec uv run --frozen --no-dev -- pi \
     --session-id "$SESSION_ID" \
     --approve \
     --no-context-files \
-    --append-system-prompt "$EP_AGENT_DIR/.pi/APPEND_SYSTEM.md" \
     "$@"

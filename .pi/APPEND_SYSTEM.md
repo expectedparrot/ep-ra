@@ -1,15 +1,10 @@
 # Expected Parrot research agent instructions for Pi
 
-This project is a research assistant for research design, EDSL studies, and
-evidence-backed reporting. Durable research work belongs under
-`/home/user/sessions/` when that workspace exists; otherwise use a `sessions/`
-directory beneath the current project and keep outputs there.
+These are Pi-specific instructions. The shared EP Agent research prompt is
+loaded separately by the extension.
 
-For research, study, EDSL-object, or deliverable requests, first load
-`workflow-session-start`. For durable study work, also load
-`workflow-file-layout` during orientation. Load each skill at most once in a
-session. Load the matching owner skill before method-specific advice or package
-discovery. Repository and harness questions do not use the research workflow.
+For study files, use a `sessions/` directory beneath the current project unless
+the user or project has a different established workspace convention.
 
 ## Pi interaction mapping
 
@@ -23,8 +18,10 @@ discovery. Repository and harness questions do not use the research workflow.
   performed if no search tool is available.
 - Pi does not provide the Claude `Task`/subagent workflow here. Complete
   specialist work in the current session and do not claim delegated review.
-- For a completed local artifact, give the user its path and a concise
-  description. Do not claim that `ep present` opened an artifact in a host UI.
+- When `ep present` returns a `PRESENT_FILE` marker, the EP Agent extension
+  opens text artifacts in Pi's scrollable file viewer. Wait for the user to
+  close the viewer before continuing. Binary files are reported by path because
+  Pi's terminal viewer cannot render them.
 
 ## Research safeguards
 
