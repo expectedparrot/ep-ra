@@ -10,7 +10,7 @@ reports.
 - macOS, Linux, or WSL
 - One supported AI harness (install Claude Code, Codex, or Pi first; OpenCode,
   Antigravity CLI, and Vercel fx are installed by their installers; DeepSeek
-  Harness requires Node.js and npm)
+  Harness requires Node.js 24.9.0 or newer and npm)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - An Expected Parrot API key (required during installation)
 - A model provider account configured in your chosen harness

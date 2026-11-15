@@ -15,16 +15,16 @@ Harness:
 ./install.sh
 ```
 
-The installer requires Node.js/npm, prepares the locked EDSL runtime, verifies
-the required Expected Parrot API key, and installs EP Agent skills in
-`~/.dsh/skills/`.
+The installer requires Node.js 24.9.0 or newer and npm. It prepares the locked
+EDSL runtime, verifies the required Expected Parrot API key, and installs EP
+Agent skills in `~/.dsh/skills/`.
 
 ## Start
 
 From the project where you want to work, run:
 
 ```bash
-source /path/to/ep-ra/.venv/bin/activate && npx @deepseek-ai/dsh web
+source /path/to/ep-ra/.venv/bin/activate && npx @deepseek-ai/dsh@latest web
 ```
 
 The command starts DeepSeek Harness's local web app. Select a workspace there,
