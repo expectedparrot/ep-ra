@@ -1,48 +1,34 @@
-# Google Antigravity
+# Google Antigravity CLI
 
 ## Install
 
-Install [Google Antigravity](https://antigravity.google/download) first, then
-install uv if it is not already available.
-
 From the EP Agent checkout, run the universal installer and choose Google
-Antigravity:
+Antigravity CLI:
 
 ```bash
 ./install.sh
 ```
 
-The installer prepares the locked EDSL runtime, verifies the required Expected
-Parrot API key (or guides you through login), then installs EP Agent's skills
-globally in `~/.gemini/config/skills/`. Restart Antigravity or reload its skills
-to see them in the agent's Customizations panel.
+If `agy` is missing, the installer uses Google's official CLI installer. It
+also prepares the locked EDSL runtime, verifies the required Expected Parrot
+API key (or guides you through login), and installs EP Agent's skills globally
+in `~/.gemini/config/skills/`.
 
-The EP Agent installer does not install the Antigravity app or CLI. To use
-Antigravity from a terminal, install its CLI using Google's command, then start
-it from your research project:
+## Start
+
+From the project where you want to work, run:
 
 ```bash
-curl -fsSL https://antigravity.google/cli/install.sh | bash
 source /path/to/ep-ra/.venv/bin/activate && agy
 ```
 
-Google account sign-in and model selection use Antigravity's normal setup.
-Open a project folder in Antigravity, then describe the research task you want
-to complete. Keep the EP Agent checkout available for its locked EDSL runtime;
-activate its `.venv` in the shell used by Antigravity when running EDSL
-commands outside the checkout.
+On first launch, sign in with your Google account when Antigravity prompts you.
+The desktop app is separate; download it from [Google Antigravity](https://antigravity.google/download).
 
 Antigravity does not interpret EDSL's `PRESENT_FILE` marker as an open-file
 command. EP Agent validates presented files and returns their project-relative
 paths so you can open them in Antigravity's file view.
 
-For EDSL commands, activate the checkout runtime in the shell that launches
-Antigravity:
-
-```bash
-source /path/to/ep-ra/.venv/bin/activate
-```
-
-See Google's official [Agent Skills documentation](https://antigravity.google/docs/skills)
-for skill discovery and the [Antigravity IDE side panel guide](https://antigravity.google/docs/agent-side-panel)
+Google's [Agent Skills documentation](https://antigravity.google/docs/skills)
+covers skill discovery. See the [Antigravity IDE side panel guide](https://antigravity.google/docs/agent-side-panel)
 for reviewing files and artifacts.
