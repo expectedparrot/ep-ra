@@ -8,30 +8,34 @@ create evidence-based reports.
 
 - macOS, Linux, or WSL
 - One supported AI harness, installed and signed in
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) to install the
-  locked EDSL runtime (unless you choose a skills-only installation)
-- An Expected Parrot API key for EDSL-backed research
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
+- An Expected Parrot API key (required during installation)
 - A model provider account configured in your chosen harness
 
 ## Install
 
-Clone this repository, then run the installer for your harness from the
-checkout root:
+Clone this repository and run the universal installer:
 
 ```bash
 git clone https://github.com/expectedparrot/ep-agent.git
 cd ep-agent
-./installers/install-codex.sh
+./install.sh
 ```
 
-Choose one installer:
+The installer lets you select Claude Code, Codex, OpenCode, or Pi. It installs
+the locked EDSL runtime, verifies an existing Expected Parrot API key or guides
+you through entering one, then installs the selected harness adapter. The key
+is required; setup stops if authentication cannot be verified. If you need a
+key, [create one in your Expected Parrot account](https://www.expectedparrot.com/getting-started/edsl-api-keys).
+
+Choose your harness guide:
 
 | Harness | Installer | Guide |
 |---|---|---|
-| Claude Code | `./installers/install-claude-code.sh` | [Claude Code](harnesses/claude-code/README.md) |
-| Codex | `./installers/install-codex.sh` | [Codex](harnesses/codex/README.md) |
-| OpenCode | `./installers/install-opencode.sh` | [OpenCode](harnesses/opencode/README.md) |
-| Pi | `./installers/install-pi.sh` | [Pi](harnesses/pi/README.md) |
+| Claude Code | Select it in the installer | [Claude Code](harnesses/claude-code/README.md) |
+| Codex | Select it in the installer | [Codex](harnesses/codex/README.md) |
+| OpenCode | Select it in the installer | [OpenCode](harnesses/opencode/README.md) |
+| Pi | Select it in the installer | [Pi](harnesses/pi/README.md) |
 
 ## Optional Anthropic document skills
 
@@ -47,33 +51,9 @@ This installs the skills from Anthropic's marketplace, outside the EP Agent
 checkout. See the [official Anthropic skills repository](https://github.com/anthropics/skills)
 for other Anthropic-supported ways to use them.
 
-By default, the installer also prepares the locked Python and EDSL runtime in
-`.venv`. To install only the harness skills or plugin, use `--skills-only`:
-
-```bash
-./installers/install-codex.sh --skills-only
-```
-
 The installer does not install the AI harness or configure model-provider
 sign-in. Authenticate with your selected provider using that harness's normal
 sign-in flow.
-
-## Configure Expected Parrot access
-
-Provide your API key through the environment:
-
-```bash
-export EXPECTED_PARROT_API_KEY="<your-key>"
-```
-
-Alternatively, configure the EDSL CLI once from the checkout:
-
-```bash
-uv run --frozen --no-dev ep auth login --api_key <your-key>
-```
-
-Keep API keys in your environment or secret manager. Do not put them in this
-repository or in a shared project configuration.
 
 ## Start a research session
 

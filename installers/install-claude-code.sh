@@ -11,6 +11,7 @@ if ! command -v claude >/dev/null 2>&1; then
 fi
 
 ep_agent_setup_runtime "$@"
+ep_agent_require_api_key
 
 if ! claude plugin marketplace list 2>/dev/null | grep -Fq 'expected-parrot'; then
     claude plugin marketplace add "$EP_AGENT_ROOT"

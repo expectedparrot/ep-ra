@@ -11,6 +11,7 @@ if ! command -v opencode >/dev/null 2>&1; then
 fi
 
 ep_agent_setup_runtime "$@"
+ep_agent_require_api_key
 
 ep_agent_install_skills \
     "$HOME/.config/opencode/skills" \

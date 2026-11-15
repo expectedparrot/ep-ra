@@ -2,31 +2,22 @@
 
 ## Install
 
-Install Pi and sign in to your model provider. From the EP Agent checkout, run:
+Install Pi and sign in to your model provider. From the EP Agent checkout, run
+the universal installer and choose Pi:
 
 ```bash
-./installers/install-pi.sh
+./install.sh
 ```
 
-The installer adds EP Agent to Pi and prepares the locked Python and EDSL
-runtime. Add `--skills-only` to skip the runtime. Start Pi in the project where
-you want to work and describe your research task. Rerun the installer after
-updating the checkout.
+The installer requires and verifies an Expected Parrot API key, prepares the
+locked Python and EDSL runtime, and adds EP Agent to Pi. Start Pi in the project
+where you want to work and describe your research task. Rerun the installer
+after updating the checkout.
 
 To install a published release directly with Pi:
 
 ```bash
 pi install git:github.com/expectedparrot/ep-agent@<release-tag>
-```
-
-## Expected Parrot access
-
-EDSL-backed research requires an Expected Parrot API key. Export
-`EXPECTED_PARROT_API_KEY` before launching Pi, or configure the EDSL CLI from
-the checkout:
-
-```bash
-uv run --frozen --no-dev ep auth login --api_key <your-key>
 ```
 
 For EDSL commands, activate the checkout's `.venv` in the shell that launches

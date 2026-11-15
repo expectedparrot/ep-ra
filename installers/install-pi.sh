@@ -11,6 +11,7 @@ if ! command -v pi >/dev/null 2>&1; then
 fi
 
 ep_agent_setup_runtime "$@"
+ep_agent_require_api_key
 
 pi install "$EP_AGENT_ROOT"
 
